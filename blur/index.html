@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blur</title>
+
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="key.js"></script>
+  <script type="text/javascript" src="clarifai.js"></script>
+  <style>
+  #images img{
+    width: 200px;
+  }
+  #images .nsfw {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="text" id="imgurl" placeholder="Image URL"/>
+    <button onclick="run($('#imgurl').val())">Get tags!</button>
+  </div>
+  <div id="images">
+  </div>
+</body>
+</html>
